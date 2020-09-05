@@ -1,6 +1,6 @@
 
 import csv
-import testing
+import yellowPages
 
 
 f = open( 'companyList.csv', 'r' )
@@ -15,7 +15,7 @@ with open('scraped_data.csv', 'a') as csvfile:
     for line in f:
         cells = line.split( "," )
 
-        scraped_data = testing.parse_listing(cells[ 2 ] , cells[ 3 ] +","+ cells[ 0 ])
+        scraped_data = yellowPages.parse_listing(cells[ 2 ] , cells[ 3 ] +","+ cells[ 0 ])
 
         if scraped_data:
 
